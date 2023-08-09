@@ -1,0 +1,380 @@
+$text: rgb(55, 130, 160);
+* {
+  padding: 0;
+  margin: 0;
+}
+#header {
+  /* position: relative; */
+  background: linear-gradient(
+    60deg,
+    rgb(53, 185, 119) 0%,
+    rgb(35, 35, 151) 100%
+  );
+  overflow: hidden;
+  padding-bottom: 100px;
+  position: relative;
+  .wave {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    float: bottom;
+    height: 100px;
+    width: 100%;
+    background: url(/project_no1_f8/assets/wave.png);
+    background-size: 1000px 100px;
+    background-position: 100px;
+  }
+  .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 0;
+  }
+  .wave.wave3 {
+    animation: animate3 10s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+  }
+  .wave.wave4 {
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20;
+  }
+  @keyframes animate {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: 100%;
+    }
+  }
+  .title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      margin-left: 10%;
+      #icon-hieu {
+        height: 100px;
+      }
+    }
+    .nav {
+      margin-right: 100px;
+      #tools {
+        li {
+          text-align: center;
+          display: inline-block;
+          font-size: 25px;
+          text-transform: uppercase;
+          padding-left: 10px;
+          i {
+            font-size: 150px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .Introduce {
+    margin-left: 10%;
+    padding-top: 20px;
+    color: black;
+    height: 250px;
+    float: left;
+  }
+
+  .avatar {
+    #avatar-hieu {
+      height: 250px;
+      border-radius: 50%;
+      float: right;
+      margin-right: 10%;
+    }
+  }
+}
+
+.info {
+  ul {
+    li {
+      float: left;
+
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      // padding-right: 10%;
+      padding-left: 10%;
+
+      .space {
+        margin-left: 20px;
+        height: 25px;
+        width: 5px;
+        background: black;
+      }
+      .add-2 {
+        text-decoration: none;
+        color: rgb(55, 130, 160);
+        font-size: 25px;
+
+        .fa {
+          font-size: 70px;
+          // padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+.about-me {
+  clear: both;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: 10%;
+  h1 {
+    padding-top: 10%;
+    color: $text;
+  }
+  p {
+    padding-top: 2%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .custom-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: $text;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background-color: #0056b3;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+.parallax {
+  position: relative;
+  /* The image used */
+  background-image: url("/project_no1_f8/assets/work.jpg");
+
+  /* Set a specific height */
+  min-height: 180px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .centered-text {
+    position: absolute; /* Để vị trí của văn bản có thể được định vị tuyệt đối trong .image-container */
+    top: 50%; /* Đặt top thành 50% để đưa chữ vào trung tâm theo chiều dọc */
+    left: 50%; /* Đặt left thành 50% để đưa chữ vào trung tâm theo chiều ngang */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Dịch chuyển chữ đi 50% chiều ngang và chiều dọc để chữ nằm chính giữa ảnh */
+    // background-color: rgba(255, 255, 255, 0.8); /* Tùy chỉnh màu nền cho chữ */
+    padding: 10px; /* Tùy chỉnh padding cho chữ */
+    font-size: 50px; /* Tùy chỉnh kích thước font chữ */
+    color: rgb(55, 130, 160);
+    font-weight: bolder;
+    text-shadow: 4px 4px 4px white;
+  }
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0 30px 15%;
+  .skill-title {
+    text-align: center;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    p {
+      width: 250px;
+    }
+    .skill-img {
+      img {
+        border: 5px solid;
+        border-radius: 50%;
+        background-color: black;
+        height: 50px;
+      }
+    }
+  }
+}
+.edu {
+  padding: 50px 15% 30px 15%;
+  h1 {
+    color: rgb(55, 130, 160);
+    padding: 0 30px 30px;
+  }
+  .edu-content {
+    padding: 0 30px;
+    border-left: 1px solid black;
+    .edu-box {
+      position: relative;
+      border: 1px solid rgb(202, 186, 186);
+      padding: 20px;
+      margin-bottom: 30px;
+      &:hover {
+        box-shadow: 0 3px 12px black;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        right: calc(100% + 22px);
+        top: 0;
+        margin-top: 7px; /* Adjust the value to vertically center the circle */
+        background-color: rgb(29, 152, 201);
+        border: 2px solid white;
+      }
+    }
+  }
+}
+.three {
+  background: linear-gradient(
+    60deg,
+    rgb(53, 185, 119) 0%,
+    rgb(35, 35, 151) 100%
+  );
+  width: 100%;
+  height: 300px;
+  margin-bottom: 50px;
+  .top-box {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0 10px 0;
+    text-shadow: 2px 2px 4px white;
+    hr {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  ul {
+    display: flex;
+    li {
+      background-color: white;
+      width: 500px;
+      height: 170px;
+      padding-top: 20px;
+      margin: 10px;
+      list-style: none;
+      text-align: center;
+      border-radius: 5%;
+      img {
+        height: 100px;
+        width: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .bot-box {
+    text-align: center;
+    a {
+      font-style: oblique;
+      color: rgb(187, 117, 31);
+    }
+  }
+}
+.contact {
+  .container {
+    li {
+      list-style-type: none;
+      text-decoration: none;
+      margin: 10px 0;
+      .add-3 {
+        text-decoration: none;
+        color: rgb(55, 130, 160);
+        font-size: 20px;
+
+        margin: 20px;
+        .fa {
+          font-size: 50px;
+          // padding-right: 10px;
+        }
+      }
+    }
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    // background-color: #f2f2f2;
+    border-radius: 5px;
+    h1 {
+      margin-bottom: 20px;
+      color: $text;
+    }
+
+    form label {
+      margin-top: 20px;
+      display: block;
+      margin-bottom: 5px;
+    }
+    #message {
+      height: 100px;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form input[type="submit"] {
+      border: 2px $text solid;
+      color: black;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: $text;
+    }
+  }
+}
+.footer {
+  background-color: #f2f2f2;
+  padding: 30px;
+  text-align: center;
+  h1 {
+    padding-bottom: 10px;
+  }
+  a {
+    .fa-brands {
+      font-size: 40px;
+    }
+  }
+  p {
+    padding-top: 10px;
+  }
+}
