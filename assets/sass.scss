@@ -180,7 +180,7 @@ $text: rgb(55, 130, 160);
 .parallax {
   position: relative;
   /* The image used */
-  background-image: url("/assets/work.jpg");
+  background-image: url(/assets/work.jpg);
 
   /* Set a specific height */
   min-height: 180px;
@@ -360,6 +360,21 @@ $text: rgb(55, 130, 160);
     form input[type="submit"]:hover {
       background-color: $text;
     }
+  }
+}
+.top {
+  //thanh lên đỉnh trang
+  i {
+    position: fixed;
+    font-size: 35px;
+    right: 10px;
+    bottom: 0px;
+    width: 50px;
+    height: 50px;
+    padding: 7px 10px;
+    background-color: #e7ab3c;
+    color: white;
+    border-radius: 50%;
   }
 }
 .footer {
