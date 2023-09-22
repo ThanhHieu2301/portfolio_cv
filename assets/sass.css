@@ -18,7 +18,7 @@
   float: bottom;
   height: 100px;
   width: 100%;
-  background: url(/assets/wave.png);
+  background: url("../assets/wave.png");
   background-size: 1000px 100px;
   background-position: 100px;
 }
@@ -164,7 +164,7 @@
 .parallax {
   position: relative;
   /* The image used */
-  background-image: url(/assets/work.jpg);
+  background-image: url("../assets/work.jpg");
   /* Set a specific height */
   min-height: 180px;
   /* Create the parallax scrolling effect */
